@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Cadastro</title>
+    <style>
+        .pass {
+            color: green;
+        }
+
+        .fail {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Verificação de Cadastro</h2>
+
+    <!-- Formulário para entrada de dados -->
+
+    Nome: <input id="nome"><br><br>
+    Idade: <input id="idade"><br><br>
+    <button onclick="verificarCadastro()">Verificar</button>
+    <h3>Resultados:</h3>
+    <div id="resultados"></div>
+
+    <script>
+        // Função para verificar nome e idade
+        function verificarCadastro() {
+            // Limpar resultados anteriores
+            const resultadosDiv = document.getElementById('resultados');
+            resultadosDiv.innerHTML = '';
+
+            // Obter valores de entrada
+            const nome = document.getElementById('nome').value;
+            const idade = document.getElementById('idade').value;
+
+            // Validar nome (deve ter pelo menos 3 letras)
+            if (nome.length >= 3) {
+                resultadosDiv.innerHTML += '<p class="pass">✔️ Nome válido</p>';
+            } else {
+                resultadosDiv.innerHTML += '<p class="fail">❌ Nome inválido (mínimo 3 letras)</p>';
+            }
+
+            // Validar idade (deve estar entre 18 e 120 anos)
+            if (idade >= 18 && idade <= 120) {
+                resultadosDiv.innerHTML += '<p class="pass">✔️ Idade válida</p>';
+            } else {
+                resultadosDiv.innerHTML += '<p class="fail">❌ Idade inválida (deve ser entre 18 e 120 anos)</p>';
+            }
+        }
+    </script>
+</body>
+
+</html>
