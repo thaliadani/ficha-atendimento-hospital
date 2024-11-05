@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verificação de Cadastro</title>
     <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #c5c5c5;
+            font-size: 1.2rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         .pass {
             color: green;
         }
@@ -21,9 +31,13 @@
 
     <!-- Formulário para entrada de dados -->
 
-    Nome: <input id="nome"><br><br>
-    Idade: <input id="idade"><br><br>
+    Nome: <input type="text" id="nome"><br><br>
+    Idade: <input type="number" id="idade"><br><br>
+    CPF: <input type="number" id="cpf"><br><br>
+    Sintomas: <input type="text" id="sintomas"><br><br>
+
     <button onclick="verificarCadastro()">Verificar</button>
+
     <h3>Resultados:</h3>
     <div id="resultados"></div>
 
@@ -37,6 +51,8 @@
             // Obter valores de entrada
             const nome = document.getElementById('nome').value;
             const idade = document.getElementById('idade').value;
+            const cpf = document.getElementById('cpf').value;
+            const sintomas = document.getElementById('sintomas').value;
 
             // Validar nome (deve ter pelo menos 3 letras)
             if (nome.length >= 3) {
@@ -50,6 +66,20 @@
                 resultadosDiv.innerHTML += '<p class="pass">✔️ Idade válida</p>';
             } else {
                 resultadosDiv.innerHTML += '<p class="fail">❌ Idade inválida (deve ser entre 18 e 120 anos)</p>';
+            }
+
+            // Validar cpf (deve ser 11 digitos)
+            if (cpf.length === 11) {
+                resultadosDiv.innerHTML += '<p class="pass">✔️ CPF válido</p>';
+            } else {
+                resultadosDiv.innerHTML += '<p class="fail">❌ CPF inválido (deve ser 11 digitos)</p>';
+            }
+            //validar sintomas (deve estar entre 5 e 100 caracteres)
+            if (sintomas.length >= 5 && sintomas.length <= 100) {
+                resultadosDiv.innerHTML += '<p class="pass">✔️ Sintomas válido</p>';
+            } else {
+                resultadosDiv.innerHTML +=
+                    '<p class="fail">❌ Sintomas inválido (deve ser entre 5 e 100 caracteres)</p>';
             }
         }
     </script>
