@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./registo-medico.png" type="image/x-icon">
     <title>Verificação de Cadastro</title>
     <style>
         body {
@@ -11,9 +12,45 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #c5c5c5;
-            font-size: 1.2rem;
+            text-align: justify;
+            background: linear-gradient(120deg,#4b65f8 30%, #fff);
+            background-size: contain;
+            font-size: 1rem;
+            font-weight: 500;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        textarea, input{
+            font-size: 1rem;
+            border: #000000 solid .2rem;
+            border-radius: 1rem;
+            padding: .3rem .5rem;
+        }
+        textarea{
+            resize: none;
+        }
+
+        #sintomas {
+            height: 150px;
+        }
+
+        button {
+            font-size: .9rem;
+            font-weight: 600;
+            padding: .3rem 1rem;
+            background-color: #fff;
+            border: #000000 solid .2rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+        button:active{
+            border: #4557bb solid  .2rem;
         }
 
         .pass {
@@ -34,11 +71,11 @@
     Nome: <input type="text" id="nome"><br><br>
     Idade: <input type="number" id="idade"><br><br>
     CPF: <input type="number" id="cpf"><br><br>
-    Sintomas: <input type="text" id="sintomas"><br><br>
+    Sintomas:<textarea id="sintomas" rows="10" cols="20"></textarea> <br><br>
+    
 
     <button onclick="verificarCadastro()">Verificar</button>
 
-    <h3>Resultados:</h3>
     <div id="resultados"></div>
 
     <script>
