@@ -7,17 +7,18 @@
     list-style: none;
     background: none;
     border: none;
+    outline: none;
 }
 
 :root {
     --fonte: "Poppins", sans-serif;
     --cor-texto: #000;
     --gradiente-de-fundo: linear-gradient(128deg, rgb(71, 107, 206) 0%, rgba(255, 255, 255, 1) 100%);
-    --fundo-caixa:rgba(255, 255, 255, 0.612);
+    --fundo-caixa:rgba(255, 255, 255, 0.527);
     --cor-botao: #fff;
     --cor-borda: #1f1e1e;
     --cor-borda-ativada: #457cbb;
-    --sombra-caixa: -1px -1px 30px -6px rgba(0, 0, 0, 0.77);
+    --sombra-caixa: -1px -1px 30px -6px rgba(0, 0, 0, 0.815);
 
 }
 
