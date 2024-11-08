@@ -1,4 +1,4 @@
-// Função para verificar nome e idade
+//Function para verificar nome e idade 
 function verificarCadastro() {
     // Limpar resultados anteriores
     const resultadosDiv = document.getElementById('resultados');
@@ -10,7 +10,8 @@ function verificarCadastro() {
     const cpf = document.getElementById('cpf').value;
     const sintomas = document.getElementById('sintomas').value;
 
-    if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 11 && !isNaN(cpf)sintomas.length >= 5 && sintomas.length <= 100) {
+    if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 11 && !isNaN(cpf) 
+        && sintomas.length >= 5 && sintomas.length <= 100) {
         sessionStorage.setItem('nome', nome);
         sessionStorage.setItem('idade', idade);
         sessionStorage.setItem('cpf', cpf);
