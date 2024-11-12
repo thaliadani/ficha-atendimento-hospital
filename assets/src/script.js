@@ -1,4 +1,4 @@
-//Cadastrar paciente
+//CADASTRO DO PACIENTE
 
 //Function para verificar nome e idade 
 function verificarCadastro() {
@@ -12,8 +12,8 @@ function verificarCadastro() {
     const cpf = document.getElementById('cpf').value;
     const sintomas = document.getElementById('sintomas').value;
 
-    if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 11 && !isNaN(cpf) 
-        && sintomas.length >= 5 && sintomas.length <= 100) {
+    //Armazenar valores
+    if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 11 && !isNaN(cpf) && sintomas.length >= 5 && sintomas.length <= 100) {
         sessionStorage.setItem('nome', nome);
         sessionStorage.setItem('idade', idade);
         sessionStorage.setItem('cpf', cpf);
@@ -24,19 +24,21 @@ function verificarCadastro() {
     }
 }
 
-//imprimir dados do paciente
+//DADOS DO PACIENTE
 
+//Obter valores armazenados
 const nome = sessionStorage.getItem('nome');
-const idade= sessionStorage.getItem('idade');
-const cpf= sessionStorage.getItem('cpf');
+const idade = sessionStorage.getItem('idade');
+const cpf = sessionStorage.getItem('cpf');
 const sintomas = sessionStorage.getItem('sintomas');
 
+//Imprimir dados do paciente
 if(nome && idade && cpf && sintomas){
     document.getElementById('dados').innerHTML =`
-    <p><strong>Nome:</strong><br> ${nome}</p>
-    <p><strong>Idade:</strong><br> ${idade}</p>
-    <p><strong>CPF:</strong><br> ${cpf}</p>
-    <p><strong>Sintomas:</strong><br> ${nome}</p>`;
+    <p><strong>Nome:</strong> ${nome}</p>
+    <p><strong>Idade:</strong> ${idade}</p>
+    <p><strong>CPF:</strong> ${cpf}</p>
+    <p><strong>Sintomas:</strong><br> ${sintomas}</p>`;
 }else{
     document.getElementById('dados').innerHTML =`<p>Dados não encontrados.</p>`
 }

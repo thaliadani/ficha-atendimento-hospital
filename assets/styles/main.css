@@ -11,7 +11,7 @@
   --fundo-caixa: rgba(255, 255, 255, 0.288);
   --cor-botao: #fff;
   --cor-borda: #181818;
-  --cor-borda-ativada: #457cbb;
+  --cor-borda-ativada: #5c7a9c;
   --sombra-caixa: -1px -1px 30px -8px rgba(0, 0, 0, 0.815);
 }
 
@@ -30,6 +30,7 @@ body {
   background-attachment: fixed;
   font-family: var(--fonte);
   font-weight: 500;
+  text-transform: capitalize;
   color: var(--cor-texto);
   width: 100vw;
 }
@@ -99,12 +100,22 @@ body {
 }
 
 #enviar:active {
-  border: var(--cor-borda-ativada) solid 0.2rem;
+  border: var(--cor-borda-ativada) solid .3rem;
 }
 
 #dados {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
+  background: var(--fundo-caixa);
+  max-width: 60%;
+  border: var(--cor-botao) solid .3rem;
+  border-radius: .5rem;
+  padding: 1rem;
 }
+
+#dados p {
+  padding: 0.5rem 0;
+}
+
+#dados p:nth-child(4) {
+  word-break: break-word;
+}
+
