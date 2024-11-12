@@ -1,98 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    background: none;
-    border: none;
-    outline: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-    --fonte: "Poppins", sans-serif;
-    --cor-texto: #000;
-    --gradiente-de-fundo: linear-gradient(128deg, rgb(71, 107, 206) 0%, rgba(255, 255, 255, 1) 100%);
-    --fundo-caixa:rgba(255, 255, 255, 0.527);
-    --cor-botao: #fff;
-    --cor-borda: #1f1e1e;
-    --cor-borda-ativada: #457cbb;
-    --sombra-caixa: -1px -1px 30px -6px rgba(0, 0, 0, 0.815);
-
+  --fonte: "Poppins", sans-serif;
+  --cor-texto: #000;
+  --gradiente-de-fundo: linear-gradient(
+    128deg,
+    rgb(71, 107, 206) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  --fundo-caixa: rgba(255, 255, 255, 0.288);
+  --cor-botao: #fff;
+  --cor-borda: #181818;
+  --cor-borda-ativada: #457cbb;
+  --sombra-caixa: -1px -1px 30px -8px rgba(0, 0, 0, 0.815);
 }
 
-body{
-    background: var(--gradiente-de-fundo);
-    background-attachment: fixed;
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: var(--fonte);
-    color: var(--cor-texto);
-    width: 100vw;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  background: none;
+  border: none;
+  outline: none;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+body {
+  background: var(--gradiente-de-fundo);
+  background-attachment: fixed;
+  font-family: var(--fonte);
+  font-weight: 500;
+  color: var(--cor-texto);
+  width: 100vw;
 }
 
-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
-    margin-top: 1rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-section .logo{
-    width: 35px;
+.cadastro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0.8rem 0;
 }
 
-.formulario li{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .8rem;
+.logo {
+  width: 34px;
 }
 
-.formulario li input, #sintomas{
-    font-size: 1rem;
-    border: var(--cor-borda) solid .2rem;
-    border-radius: 1rem;
-    padding: .3rem .5rem;
-    background-color: var(--fundo-caixa);
-    -webkit-box-shadow: var(--sombra-caixa);
-    -moz-box-shadow: var(--sombra-caixa);
-    box-shadow: var(--sombra-caixa)
+.titulo {
+  margin: 0.8rem 1rem;
+}
 
+.formulario li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.formulario li input,
+#sintomas {
+  font-size: 1rem;
+  border: var(--cor-borda) solid 0.2rem;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  background-color: var(--fundo-caixa);
+  -webkit-box-shadow: var(--sombra-caixa);
+  -moz-box-shadow: var(--sombra-caixa);
+  box-shadow: var(--sombra-caixa);
 }
 
 #sintomas {
-    resize: none;
-    height: 150px;
+  resize: none;
+  height: 150px;
 }
 
 #enviar {
-    font-size: .9rem;
-    font-weight: 600;
-    padding: .3rem 1rem;
-    background-color: var(--cor-botao);
-    border: var(--cor-borda) solid .2rem;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: .3s;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--cor-botao);
+  border: var(--cor-borda) solid 0.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 #enviar:hover {
-    background-color: var(--cor-borda);
-    color: var(--cor-botao);
+  background-color: var(--cor-borda);
+  color: var(--cor-botao);
 }
 
 #enviar:active {
-    border: var(--cor-borda-ativada) solid .2rem;
+  border: var(--cor-borda-ativada) solid 0.2rem;
+}
+
+#dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }

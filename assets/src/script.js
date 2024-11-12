@@ -1,3 +1,5 @@
+//Cadastrar paciente
+
 //Function para verificar nome e idade 
 function verificarCadastro() {
     // Limpar resultados anteriores
@@ -20,4 +22,21 @@ function verificarCadastro() {
     } else {
         alert('ACESSO NEGADO:Verifique as informações.');
     }
+}
+
+//imprimir dados do paciente
+
+const nome = sessionStorage.getItem('nome');
+const idade= sessionStorage.getItem('idade');
+const cpf= sessionStorage.getItem('cpf');
+const sintomas = sessionStorage.getItem('sintomas');
+
+if(nome && idade && cpf && sintomas){
+    document.getElementById('dados').innerHTML =`
+    <p><strong>Nome:</strong><br> ${nome}</p>
+    <p><strong>Idade:</strong><br> ${idade}</p>
+    <p><strong>CPF:</strong><br> ${cpf}</p>
+    <p><strong>Sintomas:</strong><br> ${nome}</p>`;
+}else{
+    document.getElementById('dados').innerHTML =`<p>Dados não encontrados.</p>`
 }
