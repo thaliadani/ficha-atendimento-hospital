@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/imgs/plus-medical-regular-36.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/styles/main.css">
     <title>Cadastro do paciente</title>
 </head>
 
 <body>
     <main class="container">
-        <section class="cadastro">
-            <img class="logo" src="./assets/imgs/logo.png" alt="">
+        <section class="logo">
+            <box-icon name='notepad' size="lg"></box-icon>
             <h2 class="titulo">Cadastro do paciente</h2>
         </section>
-
+        
+        <i class="user-icon"><box-icon name='user-circle' size="lg"></box-icon></i>
+        
         <!-- Formulário para entrada de dados -->
-
         <ul class="formulario">
             <li>Nome: <input type="text" id="nome"></li><br>
             <li>Idade: <input type="number" id="idade"></li><br>
@@ -31,6 +32,7 @@
     </main>
 
     <script src="./assets/src/script.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </body>
 
 </html>

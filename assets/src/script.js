@@ -20,7 +20,7 @@ function verificarCadastro() {
         sessionStorage.setItem('sintomas', sintomas);
         window.location.href = './dados-paciente.html'
     } else {
-        alert('ACESSO NEGADO:Verifique as informações.');
+        alert('ACESSO NEGADO: Verifique as informações.');
     }
 }
 
@@ -35,10 +35,10 @@ const sintomas = sessionStorage.getItem('sintomas');
 //Imprimir dados do paciente
 if(nome && idade && cpf && sintomas){
     document.getElementById('dados').innerHTML =`
-    <p><strong>Nome:</strong> ${nome}</p>
-    <p><strong>Idade:</strong> ${idade}</p>
-    <p><strong>CPF:</strong> ${cpf}</p>
-    <p><strong>Sintomas:</strong><br> ${sintomas}</p>`;
+    <p>> <strong>Nome:</strong> ${nome}</p>
+    <p>> <strong>Idade:</strong> ${idade}</p>
+    <p>> <strong>CPF:</strong> ${cpf}</p>
+    <p>> <strong>Sintomas:</strong><br> ${sintomas}</p>`;
 }else{
     document.getElementById('dados').innerHTML =`<p>Dados não encontrados.</p>`
 }

@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root {
-  --fonte: "Poppins", sans-serif;
-  --cor-texto: #000;
-  --gradiente-de-fundo: linear-gradient(
-    128deg,
-    rgb(71, 107, 206) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  --fundo-caixa: rgba(255, 255, 255, 0.288);
-  --cor-botao: #fff;
-  --cor-borda: #181818;
-  --cor-borda-ativada: #5c7a9c;
-  --sombra-caixa: -1px -1px 30px -8px rgba(0, 0, 0, 0.815);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +10,21 @@
   outline: none;
 }
 
+:root {
+  --fonte: "Poppins", sans-serif;
+  --cor-texto: #222222;
+  --gradiente-de-fundo: linear-gradient(135deg, rgb(12, 154, 197) 0%, rgb(71, 173, 224) 31%, rgb(159, 206, 233) 57%, rgb(255, 255, 255) 100%);
+  --fundo-caixa: rgba(255, 255, 255, 0.288);
+  --cor-botao: #ffffff;
+  --cor-borda: #181818;
+  --sombra-caixa: -1px -1px 30px -8px rgba(0, 0, 0, 0.815);
+}
+
 body {
   background: var(--gradiente-de-fundo);
   background-attachment: fixed;
   font-family: var(--fonte);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
   color: var(--cor-texto);
   width: 100vw;
@@ -42,7 +37,7 @@ body {
   justify-content: center;
 }
 
-.cadastro {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,13 +45,14 @@ body {
   margin: 0.8rem 0;
 }
 
-.logo {
-  width: 34px;
-}
-
-.titulo {
+.logo .titulo {
   margin: 0.8rem 1rem;
 }
+
+.logo .user-icon {
+  padding-bottom: .5rem;
+}
+
 
 .formulario li {
   display: flex;
@@ -64,6 +60,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .formulario li input,
@@ -72,10 +69,14 @@ body {
   border: var(--cor-borda) solid 0.2rem;
   border-radius: 1rem;
   padding: 0.3rem 0.5rem;
-  background-color: var(--fundo-caixa);
   -webkit-box-shadow: var(--sombra-caixa);
   -moz-box-shadow: var(--sombra-caixa);
   box-shadow: var(--sombra-caixa);
+}
+
+.formulario li input,
+#sintomas {
+  background: var(--fundo-caixa);
 }
 
 #sintomas {
@@ -84,7 +85,7 @@ body {
 }
 
 #enviar {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   padding: 0.3rem 0.8rem;
   background-color: var(--cor-botao);
@@ -97,18 +98,20 @@ body {
 #enviar:hover {
   background-color: var(--cor-borda);
   color: var(--cor-botao);
-}
-
-#enviar:active {
-  border: var(--cor-borda-ativada) solid .3rem;
+  border-color: var(--cor-botao);
 }
 
 #dados {
   background: var(--fundo-caixa);
   max-width: 60%;
-  border: var(--cor-botao) solid .3rem;
-  border-radius: .5rem;
+  border: var(--cor-botao) double .4rem;
+  border-radius: .8rem;
   padding: 1rem;
+  font-size: 1.2rem;
+}
+
+#dados strong {
+  color: #000000;
 }
 
 #dados p {
@@ -118,4 +121,3 @@ body {
 #dados p:nth-child(4) {
   word-break: break-word;
 }
-
