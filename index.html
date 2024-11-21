@@ -22,13 +22,24 @@
 
         <!-- Formulário para entrada de dados -->
         <ul class="formulario">
-            <li>Nome: <input type="text" id="nome"></li><br>
-            <li>Idade: <input type="number" id="idade"></li><br>
-            <li>CPF: <input type="text" maxlength="11" id="cpf"></li><br>
-            <li>Sintomas:<textarea id="sintomas" rows="10" cols="20"></textarea></li><br>
+            <li>Nome: 
+                <input type="text" minlength="3" required pattern="[A-Za-z\s]{3,}" placeholder="Nome completo" id="nome">
+            </li><br>
+            
+            <li>Idade: 
+                <input type="number" min="18" max="120" required id="idade">
+            </li><br>
+            
+            <li>CPF: 
+                <input type="number" min="00000000000" max="99999999999" placeholder="Apenas números" required id="cpf">
+            </li><br>
+            
+            <li>Sintomas:
+                <textarea id="sintomas" rows="50" cols="25" placeholder="Descreva os sintomas do paciente" required></textarea>
+            </li><br>
         </ul>
 
-        <button id="enviar" onclick="verificarCadastro()">Enviar</button>
+        <button type="submit" id="enviar" onclick="verificarCadastro()">Enviar</button>
 
         <div id="resultados"></div>
     </main>

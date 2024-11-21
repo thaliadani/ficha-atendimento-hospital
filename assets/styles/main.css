@@ -62,6 +62,17 @@ body {
   font-size: 1.2rem;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+
+}
+
 .formulario li input,
 #sintomas {
   font-size: 1rem;
@@ -71,6 +82,7 @@ body {
   -webkit-box-shadow: var(--sombra-caixa);
   -moz-box-shadow: var(--sombra-caixa);
   box-shadow: var(--sombra-caixa);
+  width: 100%;
 }
 
 .formulario li input,
@@ -94,7 +106,7 @@ body {
   transition: 0.3s;
 }
 
-#enviar:hover {
+#enviar:active{
   background-color: var(--cor-borda);
   color: var(--cor-botao);
   border-color: var(--cor-botao);
