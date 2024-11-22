@@ -20,7 +20,7 @@ function verificarCadastro() {
         sessionStorage.setItem('sintomas', sintomas);
         window.location.href = './dados-paciente.html'
     } else {
-        //alert('ACESSO NEGADO: Verifique as informações.');
+        alert('ACESSO NEGADO: Verifique as informações.');
     }
 }
 
