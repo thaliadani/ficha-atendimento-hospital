@@ -45,6 +45,7 @@ if (nome && idade && cpf && sintomas) {
 
 
 //Digitar apenas letras
+
 function lettersOnly(evt) {
     evt = (evt) ? evt : event;
     var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
