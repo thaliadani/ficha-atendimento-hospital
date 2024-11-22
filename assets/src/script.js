@@ -16,7 +16,9 @@ function verificarCadastro() {
     if (nome.length >= 3 && idade >= 18 && idade <= 120 && cpf.length === 11 && !isNaN(cpf) && sintomas.length >= 5 && sintomas.length <= 100) {
         sessionStorage.setItem('nome', nome);
         sessionStorage.setItem('idade', idade);
+        sessionStorage.setItem('cpf', cpf);
         sessionStorage.setItem('sintomas', sintomas);
+        window.location.href = './dados-paciente.html'
     } else {
         alert('ACESSO NEGADO: Verifique as informações.');
     }
@@ -39,6 +41,31 @@ if (nome && idade && cpf && sintomas) {
     <p>> <strong>Sintomas:</strong><br> ${sintomas}</p>`;
 } else {
     document.getElementById('dados').innerHTML = `<p>Dados não encontrados.</p>`
+}
+
+
+//Digitar apenas letras
+function lettersOnly(evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+        ((evt.which) ? evt.which : 0));
+    if (charCode > 31 && (charCode < 65 || charCode > 90) &&
+        (charCode < 97 || charCode > 122)) {
+        return false;
+    }
+    return true;
+}
+
+//Digitar apenas numeros
+function numbersOnly(evt) {
+    evt = (evt) ? evt : event;
+    var charCode = (evt.charCode) ? evt.charCode : ((evt.keyCode) ? evt.keyCode :
+        ((evt.which) ? evt.which : 0));
+    if (charCode > 31 && (charCode < 65 || charCode > 90) &&
+        (charCode < 97 || charCode > 122)) {
+        return true;
+    }
+    return false;
 }
 
 
