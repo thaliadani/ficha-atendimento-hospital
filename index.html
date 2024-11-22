@@ -22,27 +22,28 @@
 
         <!-- Formulário para entrada de dados -->
 
-            <ul class="formulario">
-                <li>Nome:
-                    <input type="text" onkeypress="return lettersOnly(event);" placeholder="Nome completo" required
-                        id="nome">
-                </li>
+        <ul class="formulario">
+            <li>Nome:
+                <input type="text" onkeypress="return lettersOnly(event);" placeholder="Nome completo" required
+                    id="nome">
+            </li>
 
-                <li>Idade:
-                    <input type="text" maxlength="3" onkeypress="return numbersOnly(event);" required id="idade">
-                </li>
+            <li>Idade:
+                <input type="text" maxlength="3" onkeypress="return numbersOnly(event);" required id="idade">
+            </li>
 
-                <li>CPF:
-                    <input type="text" maxlength="11" onkeypress="return numbersOnly(event);" placeholder="Apenas números" required
-                        id="cpf">
-                </li>
+            <li>CPF:
+                <input type="text" maxlength="11" onkeypress="return numbersOnly(event);" placeholder="Apenas números"
+                    required id="cpf">
+            </li>
 
-                <li>Sintomas:
-                    <textarea id="sintomas" rows="50" cols="25" onkeypress="return lettersOnly(event);" placeholder="Descreva os sintomas do paciente"
-                        required></textarea>
-                </li>
-            </ul>
-            <button type="submit" id="enviar" onclick="verificarCadastro()">Enviar</button>
+            <li>Sintomas:
+                <textarea id="sintomas" rows="50" cols="25" onkeypress="return lettersOnly(event);"
+                    placeholder="Descreva os sintomas do paciente" required></textarea>
+            </li>
+        </ul>
+
+        <button type="submit" id="enviar" onclick="verificarCadastro()">Enviar</button>
 
         <div id="resultados"></div>
     </main>
