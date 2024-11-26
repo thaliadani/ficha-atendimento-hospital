@@ -113,7 +113,7 @@ input[type=number] {
   border-radius: 1rem;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 #enviar:active{
