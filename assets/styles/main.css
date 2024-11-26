@@ -88,7 +88,7 @@ input[type=number] {
   -webkit-box-shadow: var(--sombra-caixa);
   -moz-box-shadow: var(--sombra-caixa);
   box-shadow: var(--sombra-caixa);
-  width: 350px;
+  width: 310px;
   background: var(--fundo-caixa);
   font-family: 'Poppins', sans-serif;
 }
