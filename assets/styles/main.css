@@ -88,11 +88,7 @@ input[type=number] {
   -webkit-box-shadow: var(--sombra-caixa);
   -moz-box-shadow: var(--sombra-caixa);
   box-shadow: var(--sombra-caixa);
-  width: 300px;
-}
-
-.formulario li input,
-#sintomas {
+  width: 350px;
   background: var(--fundo-caixa);
   font-family: 'Poppins', sans-serif;
 }
