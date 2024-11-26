@@ -22,37 +22,38 @@
 
         <!-- Formulário para entrada de dados -->
 
-        <ul class="formulario">
-            <li>Nome:
-                <input type="text" onkeypress="return lettersOnly(event);" placeholder="Não pode apelido" required
-                    id="nome">
-            </li>
+        <form action="./dados-paciente.html" class="formulario">
+            <label for="nome">Nome:</label>
+            <input name="nome" type="text"  onkeypress="return lettersOnly(event);" placeholder="Não pode apelido" required
+                id="nome">
 
-            <li>Idade:
-                <input type="text" maxlength="3" onkeypress="return numbersOnly(event);" placeholder="Deve ser maior ou igual que 18 anos" required id="idade">
-            </li>
 
-            <li>CPF:
-                <input type="text" maxlength="11" onkeypress="return numbersOnly(event);" placeholder="Apenas números"
-                    required id="cpf">
-            </li>
+            <label for="idade">Idade:</label>
+            <input name="idade" type="number" maxlength="3" 
+                placeholder="Deve ser maior ou igual que 18 anos" required id="idade">
 
-            <li>Tel/Cel:
-                <input type="tel" required id="tel">
-            </li>
 
-            <li>Email:
-                <input type="text" required id="email">
-            </li>
+            <label for="cpf">CPF:</label>
+            <input name="cpf" type="number" maxlength="11" placeholder="Apenas números"
+                required id="cpf">
 
-            <li>Sintomas:
-                <textarea id="sintomas" rows="50" cols="25" onkeypress="return lettersOnly(event);"
-                    placeholder="Descreva os sintomas do paciente" required></textarea>
-            </li>
-        </ul>
+
+            <label for="tel">Cel:</label>
+            <input name="tel" type="tel" placeholder="Apenas números" maxlength="11"
+                required id="tel">
+
+
+            <label for="email">Email:</label>
+            <input name="email" type="email" required id="tel" placeholder="@email.com">
+
+            <label for="sintomas">Sintomas:</label>
+            <textarea name="sintomas" id="sintomas" rows="50" cols="25"
+                placeholder="Descreva os sintomas do paciente" required></textarea>
+
+        
 
         <button type="submit" id="enviar" onclick="verificarCadastro()">Enviar</button>
-
+        </form>
         <div id="resultados"></div>
     </main>
 
