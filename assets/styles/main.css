@@ -28,6 +28,7 @@ body {
   text-transform: capitalize;
   color: var(--cor-texto);
   width: 100vw;
+  heigth:100vh;
 }
 
 .container {
@@ -35,7 +36,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  width:100%;
+  heigth:100%;
 }
 
 .logo {
@@ -43,7 +45,6 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: 0.8rem 0;
 }
 
 .logo .titulo {
