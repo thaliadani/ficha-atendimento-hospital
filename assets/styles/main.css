@@ -28,7 +28,6 @@ body {
   text-transform: capitalize;
   color: var(--cor-texto);
   width: 100vw;
-  height:100vh;
 }
 
 .container {
