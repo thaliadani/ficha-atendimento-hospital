@@ -94,6 +94,7 @@ input[type=number] {
 .formulario li input,
 #sintomas {
   background: var(--fundo-caixa);
+  font-family: 'Poppins', sans-serif;
 }
 
 #sintomas {
