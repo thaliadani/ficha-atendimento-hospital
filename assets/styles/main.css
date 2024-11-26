@@ -88,7 +88,7 @@ input[type=number] {
   -webkit-box-shadow: var(--sombra-caixa);
   -moz-box-shadow: var(--sombra-caixa);
   box-shadow: var(--sombra-caixa);
-  width: 100%;
+  width: 300px;
 }
 
 .formulario li input,
